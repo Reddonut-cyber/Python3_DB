@@ -29,7 +29,9 @@ c = conn.cursor()
 #     (3, '555-555-5555')
 #     ])
 
-
+c.execute("SELECT * FROM Phon_numbers")
+print(c.fetchmany(2))
+# print(c.fetchall())
 
 conn.commit()
 conn.close()
